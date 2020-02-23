@@ -1,4 +1,4 @@
-package com.wkk.arrlinked;
+package com.wkk.linkedlist;
 
 /**
  * @Time: 20-2-22下午4:10

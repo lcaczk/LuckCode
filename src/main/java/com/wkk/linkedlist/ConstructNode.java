@@ -1,4 +1,4 @@
-package com.wkk.arrlinked;
+package com.wkk.linkedlist;
 
 /**
  * @Time: 20-2-22下午5:24
@@ -17,7 +17,6 @@ public class ConstructNode {
         node2.next = node3;
         node3.next = node4;
         node4.next = node5;
-        node5.next = null;
         return node1;
 
     }
