@@ -1,6 +1,7 @@
-package com.wkk.tree;
+package com.wkk.tree.build;
 
 import com.wkk.linkedlist.ListNode;
+import com.wkk.tree.TreeNode;
 
 /**
  * @Time: 20-2-27上午10:09

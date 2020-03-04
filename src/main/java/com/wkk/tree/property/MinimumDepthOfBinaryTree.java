@@ -1,4 +1,6 @@
-package com.wkk.tree;
+package com.wkk.tree.property;
+
+import com.wkk.tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

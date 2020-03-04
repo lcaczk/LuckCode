@@ -37,18 +37,70 @@
 
 ### 二叉树
 
-1. 94 binary tree inorder traversal
-2. 144 binary tree preorder traversal 
-3. n ary tree postoder traversal 
-4. n ary tree preorder traversal
-5. n ary tree level order traversal
-6. 226 Invert binary tree 
-7. 173 Binary Search Treee Iterator
-8. 110 Balanced Binary Tree 
-9. 108 Convert Sorted Array To Binary Seach Tree(AVL)
-10. 109 Convert Sorted List to Binary Search Tree(AVL)
-11. 112 Path Sum
-12. 437 Path Sum III
+#### 1.构建树
+
+- 用前序和中序建树105
+- 用后序和中序建树106
+- 数组构建BST 108
+- 链表构建BST 109
+
+#### 2.树的遍历
+
+- 前序 144
+- 中序 94
+- 后序 145
+- 层次 102 103 107
+
+#### 3.树的属性
+
+- 求深度 104
+- 是否平衡是平衡树 110
+- 最小深度 111
+
+#### 4.BST树
+
+- 判断BST是否合法 98
+- 恢复BST 99
+- BST实现迭代：173（用到某一遍历）
+
+#### 5. 所有涉及题目
+
+1. **94** Binary Tree Inorder Traversal
+2. **95** Unique Binary Search Trees II
+3. **96** Unique Binary Search Trees
+4. **98** Validate Binary Search Tree
+5. **99** Recover Binary Search Tree
+6. **100** Same Tree
+7. **101** Symmetric Tree
+8. **102** Binary Tree Level Order Traversal
+9. **103** Binary Tree Zigzag Level Order Traversal
+10. **104** Maximum Depth of Binary Tree
+11. **105** Construct Binary Tree from Preorder and Inorder Traversal
+12. **106** Construct Binary Tree from Inorder and Postorder Traversal
+13. **107** Binary Tree Level Order Traversal II
+14. **108** Convert Sorted Array to Binary Search Tree
+15. **109** Convert Sorted List to Binary Search Tree
+16. **110** Balanced Binary Tree
+17. **111** Minimum Depth of Binary Tree
+18. **112** Path Sum
+19. **113** Path Sum II
+20. **114** Flatten Binary Tree to Linked List
+21. **116** Populating Next Right Pointers in Each Node
+22. **117** Populating Next Right Pointers in Each Node II
+23. **124** Binary Tree Maximum Path Sum
+24. **129** Sum Root to Leaf Numbers
+25. **144** Binary Tree Preorder Traversal
+26. **145** Binary Tree Postorder Traversal
+27. **173** Binary Search Tree Iterator
+28. **199** Binary Tree Right Side View
+29. **222** Count Complete Tree Nodes
+30. **226** Invert Binary Tree
+31. **230** Kth Smallest Element in a BST
+32. **235** Lowest Common Ancestor of a Binary Search Tree
+33. **236** Lowest Common Ancestor of a Binary Tree
+34. **257** Binary Tree Paths
+35. **297** Serialize and Deserialize Binary Tree
+36. **449**. Serialize and Deserialize BST
 
 
 
@@ -56,63 +108,79 @@
 
 主要为二叉树的几种遍历， 熟悉每种遍历的写法即可
 
-1. 前序遍历
+##### 前序遍历
 
-   ```java
-   public void preOrder(TreeNode root){
-       if(root != null){
-           //
-           root操作;
-           preOrder(root.left);
-           preOrder(root.right);
-       }
-   }
-   ```
+```java
+public void preOrder(TreeNode root){ // 写法1
+    if(root != null){
+        //
+        root操作;
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+}
 
-2. 中序遍历
+public void preorderTrav(TreeNode root) {	//写法2
+	if (root == NULL) return;
+	printf("%d ", root->data);	
+	preorderTrav(root->lchild);
+	preorderTrav(root->rchild);
+}
 
-   ```java
-   public void inOrder(TreeNode root){
-       if(root != null){
-           inOrder(root.left);
-           root操作;
-           inOrder(root.right);
-       }
-   }
-   ```
+public void preorderTrav(TreeNode root) {	//写法3
+	//if (root == NULL) return;	//只要能保证这棵树不是空树，这行代码就可以省略
+	printf("%d ", root->data);
+	if (root->lchild != NULL) {
+		preorderTrav(root->lchild);
+	}
+	if (root->rchild != NULL) {
+		preorderTrav(root->rchild);
+	}
+}
+```
 
-3. 后序遍历
+##### 中序遍历
 
-   ```java
-   public void postOrder(TreeNode root){
-       if(root != null){
-           postOrder(root.left);
-           postOrder(root.right);
-           root操作;
-       }
-   }
-   ```
+```java
+public void inOrder(TreeNode root){
+    if(root != null){
+        inOrder(root.left);
+        root操作;
+        inOrder(root.right);
+    }
+}
+```
 
-   
+##### 后序遍历
 
-4. 层次遍历
+```java
+public void postOrder(TreeNode root){
+    if(root != null){
+        postOrder(root.left);
+        postOrder(root.right);
+        root操作;
+    }
+}
+```
 
-   ```java
-   public void levelOrder(TreeNode root){
-       Queue queue = new LinkedList();
-       queue.offer(root);
-       while(!p.isEmpty()){
-           p = queue.poll();
-           if(p.left != null){
-               queue.offer(p.left);
-           }else if(p.right != null){
-               queue.offer(p.right);
-           }
-       }
-   }
-   ```
+##### 层次遍历
 
-   
+```java
+public void levelOrder(TreeNode root){
+    Queue queue = new LinkedList();
+    queue.offer(root);
+    while(!p.isEmpty()){
+        p = queue.poll();
+        if(p.left != null){
+            queue.offer(p.left);
+        }else if(p.right != null){
+            queue.offer(p.right);
+        }
+    }
+}
+```
+
+
 
 ### 递归
 
@@ -177,6 +245,34 @@ public xxx recursion(int level, int param){
 ```java
 
 ```
+
+
+
+#### 总结
+
+##### 对于求所有结果的情况
+
+1. 使用dfs
+2. 调用递归
+
+要求出所有结果的集合，一般都是用DFS调用递归来解。那么我们建立一个保存最终结果的大集合res，还要定义一个保存每一个组合的小集合out，每次放一个数到out里，如果out里数个数到了k个，则把out保存到最终结果中，否则在下一层中继续调用递归。网友[u010500263的博客](http://blog.csdn.net/u010500263/article/details/18435495)里有一张图很好的说明了递归调用的顺序，请点击[这里](http://blog.csdn.net/u010500263/article/details/18435495)。
+
+```java
+public void dfs(int start , List<List<XXX>> resutls, List<XXX> out, xx[] candiates){
+    // 满足条件的处理(记得写终止条件)
+    
+    for (int i = start; i < candidates.length; i++){
+        out.add(candiates[i]);
+        dfs();// 这里的参数 具体情况具体分析（是否有重复）
+        out.remove(out.size()-1)    
+    }
+    
+}
+```
+
+
+
+
 
 
 
