@@ -7,6 +7,10 @@ package com.wkk.tree;
  */
 public class UniqueBinarySearchTrees {
     public int numTrees(int n){
+        if(n==0){
+            return 0;
+        }
         return 0;
     }
+
 }

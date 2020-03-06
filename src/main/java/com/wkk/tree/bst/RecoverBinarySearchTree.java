@@ -1,4 +1,6 @@
-package com.wkk.tree;
+package com.wkk.tree.bst;
+
+import com.wkk.tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,18 +13,5 @@ import java.util.List;
 public class RecoverBinarySearchTree {
     public void revcoverTree(TreeNode root){
         List<Integer> list = new LinkedList<Integer>();
-        rebuild(root, list);
-
-
     }
-
-    private void rebuild(TreeNode root, List<Integer> list) {
-        if(root!=null){
-            rebuild(root.left, list);
-            list.add(root.val);
-            rebuild(root.right, list);
-        }
-    }
-
-
 }
