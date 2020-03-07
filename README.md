@@ -18,16 +18,36 @@
 
 ### Array
 
-1. container with most water 
+1. * [x] container with most water 
+   
    1. 暴力破解法
    2. 双指针法
-2. move zeroes
+2. * [x] move zeroes
+   
    1. 一次循环， 设置一个专门记录为0元素的索引变量
-3. climbing stairs
+3. * [x] climbing stairs
+   
    1. 递归
-4. 3sum
+4. * [x] 3sum
+   
    1. 双指针
    2. 暴力破解
+   
+5. * [ ] 26Remove Duplicates from Sorted Array
+
+6. * [ ] 27Remove Element
+
+7. * [ ] Merge Sorted Array
+
+8. * [ ] Minimum Size Subarray Sum
+
+9. * [ ] Product of Array Except Self
+
+10. * [ ] Subarray Product Less Than K
+
+11. * [ ] 1-bit and 2-bit Characters
+
+12. * [ ] Smallest Rotation with Highest Score
 
 ### 哈希
 
@@ -96,11 +116,11 @@
 29. * [x] **222** Count Complete Tree Nodes
 30. * [x] **226** Invert Binary Tree
 31. * [x] **230** Kth Smallest Element in a BST
-32.  **235** Lowest Common Ancestor of a Binary Search Tree
-33.  **236** Lowest Common Ancestor of a Binary Tree
-34.  **257** Binary Tree Paths
-35.  **297** Serialize and Deserialize Binary Tree
-36.  **449**. Serialize and Deserialize BST
+32. * [x] **235** Lowest Common Ancestor of a Binary Search Tree
+33. * [x] **236** Lowest Common Ancestor of a Binary Tree
+34. * [x] **257** Binary Tree Paths
+35. * [x] **297** Serialize and Deserialize Binary Tree
+36. * [x] **449**. Serialize and Deserialize BST
 
 
 
