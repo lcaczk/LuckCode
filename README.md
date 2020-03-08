@@ -33,21 +33,21 @@
    1. 双指针
    2. 暴力破解
    
-5. * [ ] 26Remove Duplicates from Sorted Array
+5. * [x] 26Remove Duplicates from Sorted Array
 
-6. * [ ] 27Remove Element
+6. * [x] 27Remove Element
 
-7. * [ ] Merge Sorted Array
+7. * [x] 88Merge Sorted Array
 
-8. * [ ] Minimum Size Subarray Sum
+8. * [x] 209Minimum Size Subarray Sum
 
-9. * [ ] Product of Array Except Self
+9. * [ ] 238Product of Array Except Self
 
-10. * [ ] Subarray Product Less Than K
+10. * [ ] 713Subarray Product Less Than K
 
-11. * [ ] 1-bit and 2-bit Characters
+11. * [ ] 7171-bit and 2-bit Characters
 
-12. * [ ] Smallest Rotation with Highest Score
+12. * [ ] 798Smallest Rotation with Highest Score
 
 ### 哈希
 
