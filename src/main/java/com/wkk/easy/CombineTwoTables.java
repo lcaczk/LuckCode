@@ -6,4 +6,5 @@ package com.wkk.easy;
  * @Email: kongwiki@163.com
  */
 public class CombineTwoTables {
+    //TODO
 }
