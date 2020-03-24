@@ -1,4 +1,4 @@
-package com.wkk.recursive;
+package com.wkk.dfs;
 
 import java.util.LinkedList;
 import java.util.List;
