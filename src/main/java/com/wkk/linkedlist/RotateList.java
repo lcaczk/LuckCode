@@ -23,7 +23,8 @@ public class RotateList {
             fast = fast.next;
             slow = slow.next;
         }
-        endNode.next = head;
+        // 构成环
+        fast.next = head;
         head = slow.next;
         slow.next = null;
         return head;
@@ -38,7 +39,6 @@ public class RotateList {
         k %= length;
         ListNode endNode = getEndNode(head);
         endNode.next = head;
-        ListNode temp = null;
         for (int i = 1; i <= k; i++) {
             head = endNode;
             endNode = getCircleEnd(head, length);
