@@ -9,6 +9,7 @@ import java.util.List;
  * @Email: kongwiki@163.com
  */
 public class CombinationsTest {
+    private static List<List<Integer>> lists = new LinkedList<>();
     public static void dfs(int start, int n, int[] a, int[] book) {
         // 终止条件(判断边界)
         if (start == n) {
@@ -56,8 +57,9 @@ public class CombinationsTest {
 //        int[] book = new int[n];
 //        dfs(0, n, a, book);
 //        System.out.println();
-        List<Integer> list = new LinkedList<>();
-        dfsII(1, 2, n, list);
+        List<Integer> rest = new LinkedList<>();
+//        dfsII(1, 2, n, rest);
+
 
     }
 }
