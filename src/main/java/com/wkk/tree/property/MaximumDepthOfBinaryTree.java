@@ -20,8 +20,8 @@ public class MaximumDepthOfBinaryTree {
         if(root == null){
             return 0;
         }
-        int left = helper(root.left) + 1;
-        int right = helper(root.right) +1;
+        int left = helper(root.left);
+        int right = helper(root.right);
         return Math.max(left, right) + 1;
     }
 
