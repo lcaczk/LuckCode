@@ -33,10 +33,10 @@ public class WordSearch {
         }
         char c = board[i][j];
         board[i][j] = '#';
-        boolean res = search(board, word, start + 1, i + 1, j) ||
-                search(board, word, start + 1, i - 1, j) ||
-                search(board, word, start + 1, i, j + 1) ||
-                search(board, word, start + 1, i, j - 1);
+        boolean res = search(board, word, start + 1, i+1 , j) ||
+                search(board, word, start +1, i-1, j) ||
+                search(board, word, start +1, i, j+1) ||
+                search(board, word, start +1, i, j-1);
 
         board[i][j] = c;
         return res;
