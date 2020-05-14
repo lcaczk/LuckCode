@@ -236,11 +236,12 @@ public void postOrder(TreeNode root){
 public void levelOrder(TreeNode root){
     Queue queue = new LinkedList();
     queue.offer(root);
-    while(!p.isEmpty()){
+    while(!queue.isEmpty()){
         p = queue.poll();
         if(p.left != null){
             queue.offer(p.left);
-        }else if(p.right != null){
+        }
+        if(p.right != null){
             queue.offer(p.right);
         }
     }
