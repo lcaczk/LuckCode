@@ -19,7 +19,7 @@ public class ThreeSum {
             return lists;
         }
         for (int i = 0; i < nums.length - 2; i++) {
-            if (i != 0 && (i > 0 && nums[i] != nums[i - 1])) {
+            if (i == 0 || (i > 0 && nums[i] != nums[i-1])) {
                 int sum = 0 - nums[i];
                 int low = i + 1;
                 int height = nums.length - 1;
@@ -64,7 +64,7 @@ public class ThreeSum {
 
     public static void main(String[] args) {
 //        int[] arrs = {-1, 0, 1, 2, -1, -4};
-        int[] arrs = {0, 0, 0};
-        System.out.println(ThreeSum.threeSumII(arrs));
+        int[] nums = {-1, 0, 1, 2, -1, 4};
+        System.out.println(ThreeSum.threeSum(nums));
     }
 }
