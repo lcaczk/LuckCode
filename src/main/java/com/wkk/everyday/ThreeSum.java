@@ -44,6 +44,7 @@ public class ThreeSum {
             return res;
         }
         for (int i = 0; i < nums.length-2; i++) {
+            // 去除i之前的重复元素
             if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {
                 int cur = nums[i];
                 int sum = -cur;
@@ -52,7 +53,7 @@ public class ThreeSum {
                 while (low < height) {
                     if (nums[low] + nums[height] == sum) {
                         res.add(Arrays.asList(cur, nums[low], nums[height]));
-                        // 去除重复
+                        // 去除之后的重复元素 (左右指针当前的重复元素都要去除)
                         while (low < height && nums[low] == nums[low + 1]) {
                             low++;
                         }

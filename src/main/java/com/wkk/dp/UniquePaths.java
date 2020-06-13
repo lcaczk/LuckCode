@@ -29,4 +29,20 @@ public class UniquePaths {
         }
         return dp[m-1][n-1];
     }
+
+    // 动规优化
+    public int uniquePathsI(int m, int n){
+        int[] dp = new int[n];
+        // 初始化
+        for (int i = 0; i < n; i++) {
+            dp[i] = 1;
+        }
+        for (int i = 1; i < m; i++) {
+            dp[0] = 1;
+            for (int j = 1; j < n; j++) {
+                dp[j] = dp[j-1] + dp[j];
+            }
+        }
+        return dp[n-1];
+    }
 }
