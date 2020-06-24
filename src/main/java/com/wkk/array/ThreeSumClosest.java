@@ -29,8 +29,8 @@ public class ThreeSumClosest {
     }
 
     public static void main(String[] args) {
-        int[] nums = {-1, 2, 1, -4};
-        int taget = 1;
+        int[] nums = {0, 1, 2};
+        int taget = 3;
         int i = threeSumClosest(nums, taget);
         System.out.println(i);
 
