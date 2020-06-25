@@ -1,7 +1,4 @@
-package com.wkk.everyday;
-
-import com.wkk.tree.BinaryTreeMaximumPathSum;
-import org.omg.CORBA.INTERNAL;
+package com.wkk.everyday.june;
 
 import java.util.ArrayList;
 import java.util.Arrays;
