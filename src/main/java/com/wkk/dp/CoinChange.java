@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @Email: kongwiki@163.com
  */
 public class CoinChange {
-    public int coinChange(int[] coins, int amount) {
+    public static int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, amount + 1);
         dp[0] = 0;
@@ -23,7 +23,10 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-
+        int[] coins = {25, 10, 5, 1};
+        int amoutn = 10;
+        int i = coinChange(coins, amoutn);
+        System.out.println(i);
     }
 
 }
