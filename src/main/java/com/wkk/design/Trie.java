@@ -32,7 +32,7 @@ public class Trie {
     }
 
     /**
-     * 删除
+     * 查找
      */
     public boolean search(String word) {
         TrieNode node = searchPrefix(word);
