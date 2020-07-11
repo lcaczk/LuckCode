@@ -9,9 +9,11 @@ import sun.reflect.generics.tree.Tree;
  */
 public class TreeNode {
     public int val;
+    public int count;
     public TreeNode left, right;
     public TreeNode(int val){
         this.val = val;
+        this.count = 0;
     }
     public TreeNode(){}
 }
