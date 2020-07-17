@@ -1,6 +1,9 @@
 package com.wkk.array;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * @Time: 20-3-12下午3:58
@@ -8,6 +11,7 @@ import java.util.Arrays;
  * @Email: kongwiki@163.com
  */
 public class ThreeSumClosest {
+    private static final Map<Integer, Integer> map = new HashMap<>();
     public static int threeSumClosest(int[] nums, int taget) {
         Arrays.sort(nums);
         int results = nums[1] + nums[0] + nums[nums.length - 1];
