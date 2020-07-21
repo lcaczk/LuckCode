@@ -8,40 +8,38 @@ package com.wkk.linkedlist;
 public class ReverseNodesInKGroup {
     // 给定k值 将k个节点之间进行交换
     public static ListNode reverseKGroup(ListNode head, int k) {
-        if (head == null || k == 1) {
-            return head;
-        }
-        ListNode fake = new ListNode(0);
-        fake.next = head;
-        ListNode prev = fake;
-        int i = 0;
-
-        ListNode p = head;
-        while (p != null) {
-            i++;
-            if (i % k == 0) {
-                prev = reverse(prev, p.next);
-                p = prev.next;
-            } else {
-                p = p.next;
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode pre = dummy;
+        ListNode tail = dummy;
+        while(true){
+            int count = 0;
+            while(tail!=null && count < k){
+                count++;
+                tail = tail.next;
             }
+            if(tail == null){
+                break;
+            }
+            // 使用尾插方法
+            //  pre
+            //
+            // dummy  1  2  3  4  5
+            //       cur   tail
+            // 尾插之前做标志位 防止断链
+            ListNode flag = pre.next;
+            while(pre.next != tail){
+                ListNode cur = pre.next;
+                pre.next = cur.next;
+                cur.next = tail.next;
+                tail.next = cur;
+            }
+            pre = flag;
+            tail = pre;
         }
-
-        return fake.next;
+        return dummy.next;
     }
-    public static ListNode reverse(ListNode prev, ListNode next){
-        ListNode last = prev.next;
-        ListNode curr = last.next;
 
-        while(curr != next){
-            last.next = curr.next;
-            curr.next = prev.next;
-            prev.next = curr;
-            curr = last.next;
-        }
-
-        return last;
-    }
 
     // 给定k值 将前k个节点进行交换
     public static ListNode reverseKGroupII(ListNode head, int k) {
