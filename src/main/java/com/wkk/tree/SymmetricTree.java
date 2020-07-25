@@ -19,12 +19,13 @@ public class SymmetricTree {
     }
 
     private static boolean isSymmetric(TreeNode left, TreeNode right) {
-        if (left == null && right == null) {
+         if (left == null && right == null) {
             return true;
         }
         if ((left == null && right != null) || (left != null && right == null) || (left.val != right.val)) {
             return false;
         }
+
         return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
 
     }
@@ -33,9 +34,9 @@ public class SymmetricTree {
         TreeNode node1 = new TreeNode(1);
         TreeNode node2 = new TreeNode(2);
         TreeNode node3 = new TreeNode(2);
-        TreeNode node4 = new TreeNode(3);
+        TreeNode node4 = null;
         TreeNode node5 = new TreeNode(4);
-        TreeNode node6 = new TreeNode(4);
+        TreeNode node6 = null;
         TreeNode node7 = new TreeNode(3);
         node1.left = node2;
         node1.right = node3;

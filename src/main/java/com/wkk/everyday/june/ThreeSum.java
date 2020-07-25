@@ -42,7 +42,7 @@ public class ThreeSum {
         }
         for (int i = 0; i < nums.length-2; i++) {
             // 去除i之前的重复元素
-            if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {
+            if (i == 0 || nums[i] != nums[i - 1]) {
                 int cur = nums[i];
                 int sum = -cur;
                 int low = i + 1;
