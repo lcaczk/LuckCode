@@ -20,38 +20,45 @@ public class KthLargestElementinanArray {
         return res;
     }
 
-    public int findKthLargestII(int[] nums, int k ){
+    public static int findKthLargestII(int[] nums, int k ){
         // 快排
         int low = 0;
         int height = nums.length-1;
         int position = position(nums, low, height);
-        int s = nums.length-k-1;
+        int s = nums.length-k;
         while (position != s){
             if(position < s){
-                low = position+1;
-                position = position(nums, low, height);
+
+                position = position(nums, position+1, height);
             }else {
-                height = position;
-                position = position(nums, low, height);
+                position = position(nums, low, position-1);
             }
         }
-        return position;
+        return nums[position];
 
     }
-    private int position(int[] nums, int low, int height){
+    private static int position(int[] nums, int low, int height){
         int position = nums[low];
         while (low < height){
             while (low < height && nums[height] >= position ){
                 height--;
             }
-            nums[height] = nums[low];
+            nums[low] = nums[height];
             while (low < height && nums[low] <= position){
                 low++;
             }
-            nums[low] = nums[height];
+            nums[height] = nums[low];
         }
         nums[low] = position;
         return low;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {2,1};
+        int k = 2;
+        int kthLargestII = findKthLargestII(a, k);
+        System.out.println(kthLargestII);
+
     }
 
 }

@@ -17,8 +17,7 @@ public class KthLargestElementInAnArray {
         while (m > 0){
             priorityQueue.poll();
         }
-        Integer poll = priorityQueue.poll();
-        return poll;
+        return priorityQueue.poll();
     }
 
     // 使用快排

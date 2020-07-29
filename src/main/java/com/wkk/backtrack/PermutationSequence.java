@@ -14,6 +14,9 @@ public class PermutationSequence {
         List<Integer> out = new ArrayList<>();
         backtrack(n, out);
         return results.get(k-1);
+//        return results;
+//        return results.get(k-1);
+
     }
 
     private static void backtrack(int n, List<Integer> out){
@@ -37,7 +40,7 @@ public class PermutationSequence {
     public static void main(String[] args) {
         int n = 4;
         int k = 9;
-        String permutation = getPermutation(n, k);
-        System.out.println(permutation);
+        System.out.println(getPermutation(n, k));
+
     }
 }
