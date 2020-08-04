@@ -15,7 +15,7 @@ public class ReverseString {
             return;
         }
         helper(start+1, str);
-        System.out.println(str[start]);
+        System.out.print(str[start] + " ");
 
     }
 
