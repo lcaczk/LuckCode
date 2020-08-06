@@ -6,10 +6,11 @@ package com.wkk.everyday.july;
  */
 public class MagicIndexLCCI {
     public int findMagicIndex(int[] nums) {
-        int n = nums.length;
-        if(nums == null || n == 0){
+        if(nums == null || nums.length == 0){
             return -1;
         }
+        int n = nums.length;
+
         for(int i = 0; i<n; i++){
             if(nums[i] == i){
                 return nums[i];
