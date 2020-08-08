@@ -310,10 +310,6 @@ public xxx recursion(int level, int param){
 
 **22 Generate Parentheses**
 
-```java
-
-```
-
 
 
 #### 总结
