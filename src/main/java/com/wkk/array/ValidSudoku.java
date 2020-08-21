@@ -1,6 +1,5 @@
 package com.wkk.array;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 /**

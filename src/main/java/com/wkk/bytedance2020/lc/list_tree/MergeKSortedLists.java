@@ -2,7 +2,6 @@ package com.wkk.bytedance2020.lc.list_tree;
 
 import com.wkk.linkedlist.ListNode;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**

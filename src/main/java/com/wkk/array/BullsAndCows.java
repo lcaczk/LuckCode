@@ -1,9 +1,5 @@
 package com.wkk.array;
 
-import javax.print.DocFlavor;
-import java.util.HashMap;
-import java.util.HashSet;
-
 /**
  * @Time: 20-3-30下午1:27
  * @Author: kongwiki

@@ -1,7 +1,5 @@
 package com.wkk.multithread;
 
-import com.sun.org.apache.xpath.internal.objects.XObject;
-
 /**
  * @Time: 2020/7/16下午9:29
  * @Author: kongwiki

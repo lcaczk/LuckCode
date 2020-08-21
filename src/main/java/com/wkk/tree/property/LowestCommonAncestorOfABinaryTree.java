@@ -1,7 +1,6 @@
 package com.wkk.tree.property;
 
 import com.wkk.tree.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
 import java.util.Stack;
 

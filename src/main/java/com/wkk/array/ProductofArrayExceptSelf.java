@@ -1,12 +1,5 @@
 package com.wkk.array;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
-import static java.util.Arrays.*;
-
 /**
  * @Time: 20-3-7上午11:29
  * @Author: kongwiki

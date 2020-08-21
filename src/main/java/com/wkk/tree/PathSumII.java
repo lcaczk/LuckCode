@@ -1,7 +1,5 @@
 package com.wkk.tree;
 
-import org.omg.CORBA.INTERNAL;
-
 import java.util.LinkedList;
 import java.util.List;
 

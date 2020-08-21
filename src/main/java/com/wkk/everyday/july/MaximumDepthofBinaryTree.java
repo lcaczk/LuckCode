@@ -1,6 +1,5 @@
 package com.wkk.everyday.july;
 
-import com.wkk.newcoder.base.tree.Tree;
 import com.wkk.tree.TreeNode;
 
 import java.util.LinkedList;

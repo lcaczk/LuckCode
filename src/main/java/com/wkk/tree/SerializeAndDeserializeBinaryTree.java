@@ -1,6 +1,8 @@
 package com.wkk.tree;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.LinkedList;
 
 /**
  * @Time: 20-3-6下午5:58

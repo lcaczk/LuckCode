@@ -1,7 +1,5 @@
 package com.wkk.easy;
 
-import org.omg.CORBA.INTERNAL;
-
 import java.util.HashMap;
 
 /**

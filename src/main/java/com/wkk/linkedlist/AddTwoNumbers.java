@@ -2,7 +2,6 @@ package com.wkk.linkedlist;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * @Time: 20-3-22下午8:37

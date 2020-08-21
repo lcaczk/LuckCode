@@ -3,7 +3,6 @@ package com.wkk.array;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * @Time: 2020/6/6上午7:40

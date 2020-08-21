@@ -2,7 +2,6 @@ package com.wkk.tree.bst;
 
 import com.wkk.tree.TreeNode;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 /**

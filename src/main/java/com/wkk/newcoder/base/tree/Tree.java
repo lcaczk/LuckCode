@@ -1,7 +1,6 @@
 package com.wkk.newcoder.base.tree;
 
 import com.wkk.tree.TreeNode;
-import jdk.internal.org.objectweb.asm.util.CheckAnnotationAdapter;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

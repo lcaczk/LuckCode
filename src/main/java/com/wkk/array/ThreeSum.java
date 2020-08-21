@@ -1,7 +1,5 @@
 package com.wkk.array;
 
-import com.sun.org.apache.xml.internal.utils.ListingErrorHandler;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

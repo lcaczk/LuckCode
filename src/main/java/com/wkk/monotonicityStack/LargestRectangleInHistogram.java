@@ -2,7 +2,6 @@ package com.wkk.monotonicityStack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
 
 /**
  * @Time: 2020/6/15上午9:18

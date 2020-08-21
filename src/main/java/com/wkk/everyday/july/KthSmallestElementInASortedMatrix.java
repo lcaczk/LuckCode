@@ -1,6 +1,5 @@
 package com.wkk.everyday.july;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**

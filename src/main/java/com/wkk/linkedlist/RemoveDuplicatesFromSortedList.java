@@ -1,7 +1,5 @@
 package com.wkk.linkedlist;
 
-import java.util.LinkedList;
-
 /**
  * @Time: 20-3-26下午5:01
  * @Author: kongwiki

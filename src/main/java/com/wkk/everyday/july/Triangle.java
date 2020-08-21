@@ -1,8 +1,6 @@
 package com.wkk.everyday.july;
 
-import javax.lang.model.type.ArrayType;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

@@ -1,9 +1,5 @@
 package com.wkk.array;
 
-import org.omg.CORBA.INTERNAL;
-
-import java.util.Arrays;
-
 /**
  * @Time: 20-3-7上午10:07
  * @Author: kongwiki

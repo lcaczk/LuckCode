@@ -1,10 +1,5 @@
 package com.wkk.tree;
 
-import sun.awt.image.ImageWatched;
-
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * @Time: 20-3-5下午9:55
  * @Author: kongwiki

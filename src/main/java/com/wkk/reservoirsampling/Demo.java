@@ -1,7 +1,5 @@
 package com.wkk.reservoirsampling;
 
-import com.wkk.utils.SortUtils;
-
 import java.util.Random;
 
 /**

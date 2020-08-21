@@ -1,7 +1,5 @@
 package com.wkk.everyday.july;
 
-import sun.applet.AppletResourceLoader;
-
 /**
  * @Time: 2020/7/10上午9:53
  * @Author: kongwiki

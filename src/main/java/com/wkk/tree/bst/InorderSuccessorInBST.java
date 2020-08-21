@@ -2,8 +2,6 @@ package com.wkk.tree.bst;
 
 import com.wkk.tree.TreeNode;
 
-import java.util.Stack;
-
 /**
  * @Time: 20-4-1上午10:00
  * @Author: kongwiki

@@ -1,6 +1,5 @@
 package com.wkk.linkedlist;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 /**

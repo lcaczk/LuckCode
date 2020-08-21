@@ -3,7 +3,6 @@ package com.wkk.tree.build;
 import com.wkk.tree.TreeNode;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 
 /**

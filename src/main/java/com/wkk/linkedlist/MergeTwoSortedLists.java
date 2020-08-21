@@ -1,10 +1,5 @@
 package com.wkk.linkedlist;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
-
 /**
  * @Time: 20-3-26下午1:27
  * @Author: kongwiki

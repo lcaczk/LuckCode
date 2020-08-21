@@ -2,8 +2,6 @@ package com.wkk.tree.property;
 
 import com.wkk.tree.TreeNode;
 
-import java.util.TreeMap;
-
 /**
  * @Time: 20-2-26下午10:05
  * @Author: kongwiki

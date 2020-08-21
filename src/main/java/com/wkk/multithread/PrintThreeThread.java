@@ -1,7 +1,5 @@
 package com.wkk.multithread;
 
-import jdk.nashorn.internal.ir.CallNode;
-
 /**
  * @Time: 2020/7/20下午3:44
  * @Author: kongwiki

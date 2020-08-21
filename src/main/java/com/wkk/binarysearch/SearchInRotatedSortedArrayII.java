@@ -1,9 +1,5 @@
 package com.wkk.binarysearch;
 
-import org.omg.CORBA.INTERNAL;
-
-import java.util.HashMap;
-
 /**
  * @Time: 20-3-30下午4:47
  * @Author: kongwiki

@@ -3,7 +3,6 @@ package com.wkk.everyday.aug;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  * @author kongwiki@163.com

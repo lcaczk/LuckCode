@@ -1,9 +1,5 @@
 package com.wkk.tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * @Time: 20-3-1下午5:32
  * @Author: kongwiki
