@@ -1,6 +1,6 @@
 package com.wkk.bytedance2020;
 
-import com.wkk.linkedlist.ListNode;
+import com.common.structure.ListNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

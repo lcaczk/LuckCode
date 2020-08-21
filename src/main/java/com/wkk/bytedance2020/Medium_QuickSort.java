@@ -1,6 +1,6 @@
 package com.wkk.bytedance2020;
 
-import com.wkk.utils.SortUtils;
+import com.common.utils.SortUtils;
 
 import java.util.Arrays;
 

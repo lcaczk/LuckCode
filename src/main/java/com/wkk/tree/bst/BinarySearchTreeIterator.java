@@ -1,6 +1,6 @@
 package com.wkk.tree.bst;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;

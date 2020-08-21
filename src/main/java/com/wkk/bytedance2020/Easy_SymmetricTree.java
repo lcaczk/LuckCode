@@ -1,6 +1,6 @@
 package com.wkk.bytedance2020;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 /**
  * @Time: 2020/7/25上午9:59

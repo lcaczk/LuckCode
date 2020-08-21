@@ -1,7 +1,7 @@
 package com.wkk.tree.build;
 
-import com.wkk.linkedlist.ListNode;
-import com.wkk.tree.TreeNode;
+import com.common.structure.ListNode;
+import com.common.structure.TreeNode;
 
 /**
  * @Time: 20-2-27上午10:09

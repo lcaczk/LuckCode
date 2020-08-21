@@ -1,4 +1,4 @@
-package com.wkk.tree;
+package com.common.structure;
 
 /**
  * @Time: 20-2-24上午11:08

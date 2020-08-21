@@ -1,6 +1,6 @@
 package com.wkk.everyday.july;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 /**
  * @Time: 2020/7/3上午9:11

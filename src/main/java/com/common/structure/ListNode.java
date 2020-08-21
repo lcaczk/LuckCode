@@ -1,4 +1,4 @@
-package com.wkk.linkedlist;
+package com.common.structure;
 
 /**
  * @Time: 20-2-22下午4:12

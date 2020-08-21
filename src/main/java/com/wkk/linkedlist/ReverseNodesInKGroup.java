@@ -1,5 +1,7 @@
 package com.wkk.linkedlist;
 
+import com.common.structure.ListNode;
+
 /**
  * @Time: 20-2-23上午10:45
  * @Author: kongwiki

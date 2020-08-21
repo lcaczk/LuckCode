@@ -1,6 +1,6 @@
 package com.wkk.everyday.june;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

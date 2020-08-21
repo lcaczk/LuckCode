@@ -1,8 +1,9 @@
-package com.wkk.utils;
+package com.common.utils;
 
 import java.util.Arrays;
 
 /**
+ * 排序算法测试类
  * @Time: 2020/7/20上午11:45
  * @Author: kongwiki
  * @Email: kongwiki@163.com

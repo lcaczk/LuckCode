@@ -1,6 +1,8 @@
 package com.wkk.linkedlist;
 
 
+import com.common.structure.ListNode;
+
 import java.util.HashSet;
 
 /**

@@ -1,6 +1,6 @@
 package com.wkk.top.twopointer;
 
-import com.wkk.linkedlist.ListNode;
+import com.common.structure.ListNode;
 
 /**
  * @author kongwiki@163.com

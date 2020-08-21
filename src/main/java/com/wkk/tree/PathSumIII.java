@@ -1,5 +1,7 @@
 package com.wkk.tree;
 
+import com.common.structure.TreeNode;
+
 /**
  * @Time: 20-2-29上午10:27
  * @Author: kongwiki

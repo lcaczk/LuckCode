@@ -1,6 +1,6 @@
 package com.wkk.bytedance2020.lc.list_tree;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 /**
  * @author kongwiki@163.com

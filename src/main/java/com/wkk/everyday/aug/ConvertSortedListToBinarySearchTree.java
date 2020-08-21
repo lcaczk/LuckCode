@@ -1,7 +1,7 @@
 package com.wkk.everyday.aug;
 
-import com.wkk.linkedlist.ListNode;
-import com.wkk.tree.TreeNode;
+import com.common.structure.ListNode;
+import com.common.structure.TreeNode;
 
 /**
  * @author kongwiki@163.com

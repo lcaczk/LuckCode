@@ -1,6 +1,6 @@
 package com.wkk.recursive;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 /**
  * @Time: 2020/6/25下午4:39

@@ -1,6 +1,6 @@
 package com.wkk.everyday.june;
 
-import com.wkk.linkedlist.ListNode;
+import com.common.structure.ListNode;
 
 /**
  * @Time: 2020/6/26上午9:08

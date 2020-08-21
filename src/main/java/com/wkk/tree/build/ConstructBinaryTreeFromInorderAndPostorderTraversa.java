@@ -1,6 +1,6 @@
 package com.wkk.tree.build;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

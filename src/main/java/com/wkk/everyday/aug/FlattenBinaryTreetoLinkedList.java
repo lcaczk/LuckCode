@@ -1,6 +1,6 @@
 package com.wkk.everyday.aug;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;

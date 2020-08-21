@@ -1,6 +1,6 @@
 package com.wkk.tree.build;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 /**
  * @Time: 20-2-27上午9:02

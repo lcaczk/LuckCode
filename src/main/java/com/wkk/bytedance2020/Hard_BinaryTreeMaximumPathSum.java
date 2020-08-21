@@ -1,6 +1,6 @@
 package com.wkk.bytedance2020;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

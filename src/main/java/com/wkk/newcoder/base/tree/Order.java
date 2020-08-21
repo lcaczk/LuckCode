@@ -1,6 +1,6 @@
 package com.wkk.newcoder.base.tree;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

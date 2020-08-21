@@ -1,6 +1,6 @@
 package com.wkk.tree.property;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 /**
  * @Time: 20-3-4下午5:57

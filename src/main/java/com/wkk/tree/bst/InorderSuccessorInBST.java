@@ -1,6 +1,6 @@
 package com.wkk.tree.bst;
 
-import com.wkk.tree.TreeNode;
+import com.common.structure.TreeNode;
 
 /**
  * @Time: 20-4-1上午10:00
