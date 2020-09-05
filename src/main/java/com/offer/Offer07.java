@@ -40,27 +40,23 @@ class Offer07 {
         for (int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
         }
-        return recur(preorder, inorder, 0, preorder.length - 1, 0, inorder.length - 1);
+        return recur(preorder, inorder, 0, 0, inorder.length - 1);
     }
 
-    TreeNode recur(int[] preorder, int[] inorder, int preLeft, int preRight, int inLeft, int inRight) {
+    TreeNode recur(int[] preorder, int[] inorder, int preLeft, int inLeft, int inRight) {
         if (inLeft > inRight) {
             return null;
         }
+        // 前序节点作为根节点
         TreeNode root = new TreeNode(preorder[preLeft]);
-        if (inLeft == inRight) {
-            return root;
-        }
-        // 中序遍历节点索引
-        int rootIndex = map.get(preorder[preLeft]);
+        // 根据前序节点找到中序位置
+        int inIndex = map.get(preorder[preLeft]);
         // 左子树节点个数
-        int leftNodes = rootIndex - inLeft;
-        // 右子树节点个数
-        int rightNodes = inRight - rootIndex;
-        // 递归重建左子树和右子树
-        root.left = recur(preorder, inorder, preLeft + 1, preLeft + leftNodes, inLeft, rootIndex - 1);
-        root.right = recur(preorder, inorder, preRight - rightNodes + 1, preRight, rootIndex + 1, inRight);
-
+        int numLeft = inIndex - inLeft;
+        // preLeft加1，中序从inLeft到inIndex减1
+        root.left = recur(preorder, inorder, preLeft + 1, inLeft, inIndex - 1);
+        // preLeft加左子树节点个数再加一，中序从inIndex加1到inRight
+        root.right = recur(preorder, inorder, preLeft + numLeft + 1, inIndex + 1, inRight);
         return root;
     }
 }
