@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * 题目：剑指 Offer 13.机器人的运动范围
  * 题目链接：https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/
- * 标签：
+ * 标签：广度优先搜索
  * <p>
  * 题目描述：
  * 地上有一个m行n列的方格，从坐标 [0,0] 到坐标 [m-1,n-1] 。
