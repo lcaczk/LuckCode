@@ -17,7 +17,106 @@ TODO
    不知道为什么，8月份经常做到图的遍历问题，并且就是DFS和BFS的基础使用
 
    1. [332. 重新安排行程](https://leetcode-cn.com/problems/reconstruct-itinerary/)
+
+      根据题目来， 可以得出就是一个欧拉图问题，使用HashMap和PriorityQueue的方式
+
+      ```java
+      final Map<String, PriorityQueue<String>> map = new HashMap<>();
+      final List<String> itinerary = new ArrayList<>();
+      public List<String> findItineraryII(List<List<String>> tickets) {
+          for (List<String> ticket : tickets) {
+              String src = ticket.get(0), dst = ticket.get(1);
+              if (!map.containsKey(src)) {
+                  map.put(src, new PriorityQueue<>());
+              }
+              map.get(src).offer(dst);
+          }
+          dfs(start);
+          Collections.reverse(itinerary);
+          return itinerary;
+      }
+      public void dfs(String curr) {
+          while (map.containsKey(curr) && map.get(curr).size() > 0) {
+              String tmp = map.get(curr).poll();
+              dfs(tmp);
+          }
+          itinerary.add(curr);
+      }
+      ```
+
+      
+
    2. [841. 钥匙和房间](https://leetcode-cn.com/problems/keys-and-rooms/)
+
+      很经典的图的遍历问题，使用**深度遍历**和**广度遍历**均可
+
+      1. 深度优先遍历遍历整张图
+
+         ```java
+         boolean[] vis;
+         int num;
+         
+         public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+           	int n = rooms.size();
+             num = 0;
+             vis = new boolean[n];
+             dfs(rooms, 0);
+             return num == n;
+         }
+         
+         public void dfs(List<List<Integer>> rooms, int x) {
+             vis[x] = true;
+             num++;
+             for (int it : rooms.get(x)) {
+                 if (!vis[it]) {
+                     dfs(rooms, it);
+                }
+             }
+         }
+         ```
+
+      2. 广度优先遍历遍历整张图
+
+         ```java
+         public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+             int n = rooms.size(), num = 0;
+             boolean[] vis = new boolean[n];
+             Queue<Integer> que = new LinkedList<Integer>();
+             vis[0] = true;
+             que.offer(0);
+             while (!que.isEmpty()) {
+                 int x = que.poll();
+                 num++;
+                 for (int it : rooms.get(x)) {
+                     if (!vis[it]) {
+                         vis[it] = true;
+                         que.offer(it);
+                     }
+                 }
+             }
+             return num == n;
+         }
+         ```
+
+         
+
+   3.  [753. 破解保险箱](https://leetcode-cn.com/problems/cracking-the-safe/)
+
+      
+
+2. 图的应用II： 拓扑排序
+
+   1. [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
+
+      简化思路：[课程安排图是否是 **有向无环图(DAG)**。即课程间规定了前置条件，但不能构成任何环路，否则课程前置条件将不成立。](https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/)
+
+      如何判断是否为有向无环图：使用**拓扑排序**
+
+      
+
+   2. [210. 课程表II](https://leetcode-cn.com/problems/course-schedule-ii/)
+
+   
 
 #### 2020/09
 
