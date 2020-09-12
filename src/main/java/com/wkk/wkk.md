@@ -106,13 +106,52 @@ TODO
 
 2. 图的应用II： 拓扑排序
 
-   1. [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
+   1. [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)(**拓扑排序的经典应用**)
 
-      简化思路：[课程安排图是否是 **有向无环图(DAG)**。即课程间规定了前置条件，但不能构成任何环路，否则课程前置条件将不成立。](https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/)
+      * **简化思路：**[课程安排图是否是 **有向无环图(DAG)**。即课程间规定了前置条件，但不能构成任何环路，否则课程前置条件将不成立。](https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/)
 
-      如何判断是否为有向无环图：使用**拓扑排序**
+      * 如何判断是否为有向无环图：使用[**拓扑排序**](https://oi-wiki.org/graph/topo/)
 
-      
+      * **实现步骤（常用方法）：**
+        1. 从DAG（有向无环图）中选取一个没有前驱的顶点，并删除
+        2. 从图中删除该顶点和所有以它为起点的所有有向边
+        3. 重复步骤一和二直到当前的DAG图为空或当前图中不存在无前驱的顶点为止（为空说明无环，后一种情况则说明存在环）
+
+      ```java
+      public boolean canFinish(int numCourses, int[][] prerequisites) {
+          // 入度数组
+          int[] indegrees = new int[numCourses];
+          // 图使用邻接表存储
+          List<List<Integer>> adjaceny = new ArrayList<>();
+          Queue<Integer> queue = new LinkedList<>();
+          // 以下为构造邻接表和入度
+          for (int i = 0; i < numCourses; i++) {
+              adjaceny.add(new ArrayList<>());
+          }
+          // 根据题意： cps[1]为当前顶点，cps[0]为cps[1]指向顶点
+          for (int[] cps : prerequisites) {
+              indegrees[cps[0]]++;
+              adjaceny.get(cps[1]).add(cps[0]);
+          }
+          // 寻找入度为0的顶点，也就是没有前驱的顶点，说明以改点作为起始点
+          for (int i = 0; i < numCourses; i++) {
+              if (indegrees[i] == 0) {
+                  queue.add(i);
+              }
+          }
+          // 从该点出发，在图中删除该点之后，检测下一个入度为0的顶点加入队列
+          while (!queue.isEmpty()) {
+              Integer pre = queue.poll();
+              numCourses--;
+              for (Integer integer : adjaceny.get(pre)) {
+                  if (--indegrees[integer] == 0) {
+                      queue.add(integer);
+                  }
+              }
+          }
+          return numCourses == 0;
+      }
+      ```
 
    2. [210. 课程表II](https://leetcode-cn.com/problems/course-schedule-ii/)
 
