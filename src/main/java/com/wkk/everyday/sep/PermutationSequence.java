@@ -1,33 +1,33 @@
 package com.wkk.everyday.sep;
 
-import sun.jvm.hotspot.ui.action.HSDBActionManager;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 /**
- * 题目：第k个排列
- *<p>
- *描述：给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。
- *按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：
+ * 题目：60.第k个排列
+ * 题目链接：https://leetcode-cn.com/problems/permutation-sequence/
+ * <p>
+ * 描述：给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。
+ * 按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：
  * "123"
  * "132"
  * "213"
  * "231"
  * "312"
  * "321"
- *<p>
- *说明：n in [1, 9], k in [1, n!]
- *<p>
- *思路：回溯
+ * <p>
+ * 说明：n in [1, 9], k in [1, n!]
+ * <p>
+ * 思路：回溯
+ *
  * @author kongwiki@163.com
  * @since 2020/9/5 3:29 下午
  */
 public class PermutationSequence {
     private List<List<Integer>> res;
     private List<Integer> out;
+
     // 不出意外， 果断超时了
     // 自己的思路是吧所有的结果都存储起来，然后再获取结果
     public String getPermutation(int n, int k) {
@@ -68,18 +68,18 @@ public class PermutationSequence {
         return ans.toString();
     }
 
-    private void backtrack(List<List<Integer>> res, List<Integer> out, int n){
-        if(out.size() == n){
+    private void backtrack(List<List<Integer>> res, List<Integer> out, int n) {
+        if (out.size() == n) {
             res.add(new ArrayList<>(out));
         }
 
         for (int i = 1; i <= n; i++) {
-            if(out.contains(i)){
+            if (out.contains(i)) {
                 continue;
             }
             out.add(i);
             backtrack(res, out, n);
-            out.remove(out.size()-1);
+            out.remove(out.size() - 1);
         }
     }
 
