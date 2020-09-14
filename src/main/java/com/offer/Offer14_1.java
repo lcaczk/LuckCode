@@ -44,19 +44,15 @@ class Offer14_1 {
         if (n == 2 || n == 3) {
             return n - 1;
         }
-        if (n == 4) {
-            return 4;
+        int a = n / 3;
+        int b = n % 3;
+        if (b == 2) {
+            return (int) (2 * Math.pow(3, a));
         }
-        if (n % 3 == 2) {
-            return (int) (2 * Math.pow(3, n / 3));
+        if (b == 0) {
+            return (int) Math.pow(3, a);
         }
-        if (n % 3 == 0) {
-            return (int) Math.pow(3, n / 3);
-        }
-        if (n % 3 == 1) {
-            return (int) Math.pow(3, n / 3 - 1) * 4;
-        }
-        return -1;
+        return (int) Math.pow(3, a - 1) * 4;
     }
 
 
