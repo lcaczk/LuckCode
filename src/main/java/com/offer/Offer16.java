@@ -32,19 +32,20 @@ class Offer16 {
         if (x == 0) {
             return 0;
         }
+        long b = n;
         // 指数为负数
-        if (n < 0) {
+        if (b < 0) {
             x = 1 / x;
-            n = -n;
+            b = -b;
         }
         double res = 1.0;
         // 快速幂
-        while (n > 0) {
-            if ((n & 1) == 1) {
+        while (b > 0) {
+            if ((b & 1) == 1) {
                 res *= x;
             }
             x *= x;
-            n >>= 1;
+            b >>= 1;
         }
         return res;
     }
