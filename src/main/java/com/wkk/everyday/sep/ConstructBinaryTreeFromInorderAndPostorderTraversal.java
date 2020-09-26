@@ -13,46 +13,38 @@ import java.util.Map;
  * @since 2020/9/25 10:22 下午
  */
 public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
-    // 剑指offer第7题类似
-    int post_idx;
-    int[] postorder;
-    int[] inorder;
-    Map<Integer, Integer> idx_map = new HashMap<Integer, Integer>();
+    private static int[] inOrder, postOrder;
+    private static Map<Integer, Integer> map = new HashMap<>(16);
+    private static int postStarter;
 
-    public TreeNode helper(int in_left, int in_right) {
-        // 如果这里没有节点构造二叉树了，就结束
-        if (in_left > in_right) {
-            return null;
+    public static TreeNode buildTree(int[] inorder, int[] postorder) {
+        inOrder = inorder;
+        postOrder = postorder;
+        postStarter = postorder.length-1;
+        for(int i = 0; i < inOrder.length; i++){
+            map.put(inorder[i], i);
         }
-
-        // 选择 post_idx 位置的元素作为当前子树根节点
-        int root_val = postorder[post_idx];
-        TreeNode root = new TreeNode(root_val);
-
-        // 根据 root 所在位置分成左右两棵子树
-        int index = idx_map.get(root_val);
-
-        // 下标减一
-        post_idx--;
-        // 构造右子树
-        root.right = helper(index + 1, in_right);
-        // 构造左子树
-        root.left = helper(in_left, index - 1);
-        return root;
+        return helper(0, inOrder.length-1);
     }
 
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
-        this.postorder = postorder;
-        this.inorder = inorder;
-        // 从后序遍历的最后一个元素开始
-        post_idx = postorder.length - 1;
-
-        // 建立（元素，下标）键值对的哈希表
-        int idx = 0;
-        for (Integer val : inorder) {
-            idx_map.put(val, idx++);
+    private static TreeNode helper(int left, int right){
+        if(left > right){
+            return null;
         }
+        // 从中间隔开，分为左右两个数组构建左右子树
+        int val = postOrder[postStarter];
+        TreeNode root = new TreeNode(val);
+        int idx = map.get(val);
+        postStarter--;
+        root.right = helper(idx+1, right);
+        root.left = helper(left, idx-1);
+        return root;
 
-        return helper(0, inorder.length - 1);
+    }
+
+    public static void main(String[] args) {
+        int[] post = {9, 15, 7, 20 ,3};
+        int[] in = {9 , 3, 15, 20, 7};
+        buildTree(in, post);
     }
 }
