@@ -23,7 +23,7 @@ public class ReverseNodesInKGroup {
             if(tail == null){
                 break;
             }
-            // 使用尾插方法
+            // 使用尾部进行头插法
             //  pre
             //
             // dummy  1  2  3  4  5
