@@ -2,19 +2,17 @@
 
 > 用战术上的勤奋, 掩盖战略上的懒惰
 
-<div align="center">
-<img src="images/bg.jpg" width="400px"></img>
-</div>
-
-
-
 <br>
 
-| &nbsp;JDK | &nbsp;Spring | &nbsp;Mybatis | 
+
+
+| &nbsp;JDK | &nbsp;Spring |
 | :-------------: | :--------------------: |
 |   :moneybag:    |        :crown:         |
 
 <br>
+
+
 
 ## 目录
 ### JDK
