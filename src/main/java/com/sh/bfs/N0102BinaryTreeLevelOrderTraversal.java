@@ -39,6 +39,7 @@ class N0102BinaryTreeLevelOrderTraversal {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
+            System.out.println(queue);
             List<Integer> listLevel = new LinkedList<>();
             int levelSize = queue.size();
             for (int i = 0; i < levelSize; i++) {
@@ -54,5 +55,25 @@ class N0102BinaryTreeLevelOrderTraversal {
             res.add(listLevel);
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        N0102BinaryTreeLevelOrderTraversal solution = new N0102BinaryTreeLevelOrderTraversal();
+        List<Integer> list = new LinkedList<Integer>() {{
+            add(1);
+            add(2);
+            add(3);
+            add(null);
+            add(4);
+            add(5);
+            add(6);
+            add(null);
+            add(null);
+            add(null);
+            add(null);
+            add(null);
+            add(null);
+        }};
+        solution.levelOrder(TreeNode.createBinaryTree(list));
     }
 }
