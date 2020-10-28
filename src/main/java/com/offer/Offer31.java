@@ -1,6 +1,7 @@
 package com.offer;
 
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 /**
  * 题目：剑指 Offer 31.栈的压入、弹出序列
@@ -31,7 +32,7 @@ import java.util.Stack;
  */
 class Offer31 {
     public boolean validateStackSequences(int[] pushed, int[] popped) {
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new LinkedList<>();
         int indexPop = 0;
         // 循环压入
         for (int num : pushed) {
