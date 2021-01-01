@@ -1,5 +1,6 @@
 package com.wkk.newcoder.book.linkedlist;
 
+import com.common.structure.DoubleNode;
 import com.common.structure.ListNode;
 
 /**
@@ -37,6 +38,39 @@ public class RemoveKth {
             }
             // 1 -> 2 -> 3 -> 4 -> 5
             cur.next = cur.next.next;
+        }
+        return head;
+    }
+
+    /**
+     * 双向链表
+     * @param head
+     * @param lastKth
+     * @return
+     */
+    public DoubleNode removeLastKthNode(DoubleNode head, int lastKth) {
+        if (head == null || lastKth < 1) {
+            return head;
+        }
+        DoubleNode cur = head;
+        while (cur != null) {
+            lastKth--;
+            cur = cur.next;
+        }
+        if (lastKth == 0) {
+            return head.next;
+        }
+        // kth < 0;
+        if (lastKth < 0) {
+            cur = head;
+            while (++lastKth<0) {
+                cur = cur.next;
+            }
+            DoubleNode temp = cur.next.next;
+            cur.next = temp;
+            if (temp != null) {
+                temp.pre = cur;
+            }
         }
         return head;
     }
