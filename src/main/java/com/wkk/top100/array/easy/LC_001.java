@@ -1,4 +1,4 @@
-package com.wkk.top100;
+package com.wkk.top100.array.easy;
 
 import java.util.HashMap;
 import java.util.Map;
