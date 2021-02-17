@@ -1,4 +1,4 @@
-package com.wkk.top100.tree;
+package com.wkk.top100.tree.medium;
 
 import com.common.structure.TreeNode;
 

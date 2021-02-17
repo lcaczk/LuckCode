@@ -1,4 +1,4 @@
-package com.wkk.top100.string;
+package com.wkk.top100.string.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
