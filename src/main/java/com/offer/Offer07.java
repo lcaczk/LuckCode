@@ -59,6 +59,39 @@ class Offer07 {
         root.right = recur(preorder, inorder, preLeft + numLeft + 1, inIndex + 1, inRight);
         return root;
     }
+
+    /**
+     * 更加简明的思路
+     * 可以根据该思路稍作修改，作为中序+后序构成二叉树的方式
+     * @param preorder
+     * @param inorder
+     * @return
+     */
+    private int start = 0;
+    private int[] preOrder;
+    private int[] inOrder;
+    private static final Map<Integer, Integer> currentMap = new HashMap<>(16);
+    public TreeNode buildTreeII(int[] preorder, int[] inorder) {
+        preOrder = preorder;
+        inOrder = inorder;
+        for (int i = 0; i < inOrder.length; i++) {
+            currentMap.put(inOrder[i], i);
+        }
+        return helper(0, inOrder.length-1);
+    }
+
+    private TreeNode helper(int left, int right) {
+        if (left > right) {
+            return null;
+        }
+        int val = preOrder[start];
+        TreeNode root = new TreeNode(val);
+        int index = map.get(val);
+        start++;
+        root.left = helper(left, index - 1);
+        root.right = helper(index + 1, right);
+        return root;
+    }
 }
 
 

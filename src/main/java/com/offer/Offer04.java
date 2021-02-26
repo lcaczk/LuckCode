@@ -29,8 +29,8 @@ package com.offer;
  */
 class Offer04 {
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
-        // 判空
-        if (matrix == null || matrix.length == 0) {
+        // 判空 [[]] 条件也需要考虑， 所以需要外加一个判断 matrix[0].length == 0
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
         // 每一行最左边是最小的，每一列最上边是最小的

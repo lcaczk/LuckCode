@@ -1,5 +1,6 @@
 package com.offer;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,6 +24,12 @@ import java.util.Set;
  * 2 <= n <= 100000
  */
 class Offer03 {
+    /**
+     * set 检验重复元素
+     *
+     * @param nums
+     * @return
+     */
     public int findRepeatNumber(int[] nums) {
         // 直接用set遍历查找
         Set<Integer> hashSet = new HashSet<>();
@@ -33,5 +40,42 @@ class Offer03 {
             hashSet.add(n);
         }
         return 0;
+    }
+
+    /**
+     * 排序之后 判断
+     *
+     * @param nums
+     * @return
+     */
+    public int findRepeatNumberII(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i + 1] == nums[i]) {
+                return nums[i];
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 原地置换法
+     *
+     * @param nums
+     * @return
+     */
+    public int findRepeatNumberIII(int[] nums) {
+        int temp = 0;
+        for (int i = 0; i < nums.length; i++) {
+            while (nums[i] != i) {
+                if (nums[i] == nums[nums[i]]) {
+                    return nums[i];
+                }
+                temp = nums[i];
+                nums[i] = nums[nums[i]];
+                nums[nums[i]] = temp;
+            }
+        }
+        return -1;
     }
 }
