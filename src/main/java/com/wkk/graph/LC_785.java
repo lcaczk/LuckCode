@@ -30,18 +30,18 @@ public class LC_785 {
                 color[i] = RED;
                 while (!queue.isEmpty()) {
                     int node = queue.poll();
-                    int cNei = color[node] == RED ? GREEN : RED;
-                    for (int neighbor : graph[node]) {
-                        if (color[neighbor] == UNCOLORED) {
-                            queue.offer(neighbor);
-                            color[neighbor] = cNei;
-                        } else if (color[neighbor] != cNei) {
+                    int nextColor = color[node] == RED ? GREEN : RED;
+                    for (int number : graph[node]) {
+                        if (color[number] == UNCOLORED) {
+                            queue.offer(number);
+                            color[number] = nextColor;
+                        } else if (color[number] != nextColor) {
                             return false;
                         }
                     }
                 }
             }
         }
-        return false;
+        return true;
     }
 }
