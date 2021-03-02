@@ -1,5 +1,8 @@
 package com.wkk.top100.tree.medium;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
  * 96 不同的二叉搜索树
  * 思路：
@@ -28,5 +31,12 @@ public class LC_96 {
         }
         return g[n];
 
+    }
+
+    public static void main(String[] args) {
+        Deque<Integer> deque = new ArrayDeque<>();
+        deque.removeLast();
+        deque.pollFirst();
+        deque.pop();
     }
 }
