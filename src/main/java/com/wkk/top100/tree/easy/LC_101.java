@@ -25,7 +25,7 @@ import java.util.Objects;
  * @author weikunkun
  * @since 2021/2/15
  */
-public class LC_101 {
+public class    LC_101 {
     public boolean isSymmetric(TreeNode root) {
         if (Objects.isNull(root)) {
             return true;

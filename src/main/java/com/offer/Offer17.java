@@ -27,4 +27,29 @@ class Offer17 {
         }
         return res;
     }
+
+    /**
+     * 思路： 题目难点为确定数组的大小。。。
+     * @param n
+     * @return
+     */
+    public int[] printNumbersII(int n) {
+        if (n < 0) {
+            return null;
+        }
+        return genNumber(n);
+    }
+
+    private int[] genNumber(int n) {
+        int sum = 1;
+        while (n > 0) {
+            n--;
+            sum *= 10;
+        }
+        int[] result = new int[sum-1];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = i + 1;
+        }
+        return result;
+    }
 }
