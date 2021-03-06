@@ -1,5 +1,8 @@
 package com.offer;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * 题目：剑指 Offer 04.二维数组中的查找
  * 题目链接：https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/
@@ -49,5 +52,10 @@ class Offer04 {
             }
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> integers = Arrays.asList(1, 2, 3);
+        int[] ints = integers.stream().mapToInt(i -> i).toArray();
     }
 }
