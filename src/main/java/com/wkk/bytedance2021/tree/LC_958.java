@@ -48,6 +48,7 @@ public class LC_958 {
 
     /**
      * 和上述方法一样，但是更加简明
+     *
      * @param root
      * @return
      */
