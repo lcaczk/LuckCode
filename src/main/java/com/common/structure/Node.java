@@ -11,6 +11,7 @@ public class Node {
     public Node left;
     public Node right;
     public Node next;
+    public Node random;
     public List<Node> children;
 
     public Node() {}
@@ -29,5 +30,14 @@ public class Node {
         left = _left;
         right = _right;
         next = _next;
+    }
+
+    public Node(int val, Node left, Node right, Node next, Node random, List<Node> children) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+        this.next = next;
+        this.random = random;
+        this.children = children;
     }
 }
