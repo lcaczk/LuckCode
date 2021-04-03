@@ -3,6 +3,9 @@ package com.wkk.bytedance2021.tree;
 import com.common.structure.TreeNode;
 
 /**
+ * 124 二叉树中的最大路径和
+ * 思路： 详看 https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/solution/shou-hui-tu-jie-hen-you-ya-de-yi-dao-dfsti-by-hyj8/
+ * 使用后序遍历
  * @author weikunkun
  * @since 2021/3/16
  */
@@ -19,12 +22,9 @@ public class LC_124 {
         if (root == null) return 0;
         int left = dfs(root.left);
         int right = dfs(root.right);
-        //当前节点为n,对于当前节点来说，最大值可以为n+left,n+right,n,n+left+right 和 n.val
-        //上面四项中的一个，但是返回是不能返回第四个的，那种路径是不成立的
-        int p = Math.max(root.val, Math.max(root.val + left, root.val + right));
-        max = Math.max(max, p);
-        int p2 = Math.max(p, root.val + left + right);
-        max = Math.max(max, p2);
-        return p;
+        int innerMax = root.val + left + right;
+        max = Math.max(max, innerMax);
+        int outerMax = root.val + Math.max(left, right);
+        return outerMax < 0 ? 0 : outerMax;
     }
 }

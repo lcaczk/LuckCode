@@ -30,4 +30,29 @@ public class LC_101 {
         boolean result = left.val == right.val;
         return result && isSame(left.left, right.right) && isSame(left.right, right.left);
     }
+
+    public boolean isSymmetricII(TreeNode root) {
+        // 自顶向下
+        if (null == root) {
+            return true;
+        }
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+        return helper(left, right);
+    }
+
+    private boolean helper(TreeNode left, TreeNode right) {
+        // left != null && right != null
+        // left == null && right != null
+        // left != null && right == null
+        // left == null && right == null
+        if (left == null || right == null) {
+            if (left == null && right == null) {
+                return true;
+            }
+            return false;
+        }
+        boolean result = left.val == right.val;
+        return result && helper(left.left, right.right) && helper(left.right, right.left);
+    }
 }

@@ -1,4 +1,4 @@
-package com.wkk.tree;
+package com.wkk.bytedance2021.tree;
 
 import com.common.structure.TreeNode;
 
@@ -7,11 +7,11 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @Time: 20-3-6下午5:58
- * @Author: kongwiki
- * @Email: kongwiki@163.com
+ * 二叉树的序列化与反序列化
+ * @author weikunkun
+ * @since 2021/4/3
  */
-public class SerializeAndDeserializeBinaryTree {
+public class LC_297 {
     private final String delimiter = ",";
     private final String emptyNode = "#";
 
