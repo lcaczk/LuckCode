@@ -17,6 +17,8 @@ public class LC_300 {
 
         int[] dp = new int[len];
         Arrays.fill(dp, 1);
+        // 如果最长递增子序列以nums[i]为最后的字符
+        // 则num[0-i-1]的每一个位都有可能作为倒数第二大的子序列的尾部
         int res = 0;
         for (int i = 1; i < len; i++) {
             for (int j = 0; j < i; j++) {

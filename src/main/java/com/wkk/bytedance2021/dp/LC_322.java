@@ -1,6 +1,7 @@
 package com.wkk.bytedance2021.dp;
 
 /**
+ * 零钱兑换
  * @author weikunkun
  * @since 2021/3/20
  */
@@ -65,7 +66,9 @@ public class LC_322 {
 
     public static void main(String[] args) {
         int[] arr = {2};
+        int[] arr1 = {1, 2, 5};
         int target = 3;
+        target = 11;
         coinChangeII(arr, target);
     }
 }
