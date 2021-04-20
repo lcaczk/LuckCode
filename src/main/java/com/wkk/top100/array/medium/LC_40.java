@@ -3,13 +3,14 @@ package com.wkk.top100.array.medium;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author weikunkun
  * @since 2021/2/17
  */
 public class LC_40 {
-    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> out = new ArrayList<>();
         if (candidates.length == 0 || null == candidates) {
@@ -21,7 +22,7 @@ public class LC_40 {
         return result;
     }
 
-    private void backtrack(List<List<Integer>> result, List<Integer> out, int[] candidates,int target, int currentSum, int index) {
+    private static void backtrack(List<List<Integer>> result, List<Integer> out, int[] candidates,int target, int currentSum, int index) {
         if (currentSum == target) {
             result.add(new ArrayList<>(out));
             return;
@@ -39,5 +40,12 @@ public class LC_40 {
             currentSum -= candidates[i];
             out.remove(out.size()-1);
         }
+    }
+
+    public static void main(String[] args) {
+        int[] costs = {1,6,3,1,2,5};
+        List<Integer> collect = Arrays.stream(costs).boxed().collect(Collectors.toList());
+        int coins = 20;
+        System.out.println(combinationSum2(costs, coins));
     }
 }
