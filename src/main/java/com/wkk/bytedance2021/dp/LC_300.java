@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @since 2021/3/20
  */
 public class LC_300 {
-    public int lengthOfLIS(int[] nums) {
+    public static int lengthOfLIS(int[] nums) {
         int len = nums.length;
         if (len < 2) {
             return len;
@@ -29,6 +29,13 @@ public class LC_300 {
             res = Math.max(res, dp[i]);
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[6];
+        String a = "1";
+        String b = "2";
+        System.out.println(a.compareTo(b));
     }
 }
 
