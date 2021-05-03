@@ -39,6 +39,12 @@ public class LC_78 {
     public static void main(String[] args) {
         LC_78 lc_78 = new LC_78();
         int [] nums = {1,2,3};
-        lc_78.subsets(nums);
+        String a = "050043";
+        char[] chars = a.toCharArray();
+        int[] arr = new int[chars.length];
+        for (int i = 0; i < chars.length; i++) {
+            arr[i] = chars[i] - '0';
+        }
+        System.out.println(lc_78.subsets(arr));
     }
 }
