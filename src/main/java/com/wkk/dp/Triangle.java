@@ -1,5 +1,6 @@
 package com.wkk.dp;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -48,6 +49,8 @@ public class Triangle {
 //        Triangle triangle = new Triangle();
 //        int i = triangle.minimumTotal(matrix);
 //        System.out.println(i);
+        int[] array = {1,23,546,43,14,63423,523};
+        int asInt = Arrays.stream(array).max().getAsInt();
 
     }
 
