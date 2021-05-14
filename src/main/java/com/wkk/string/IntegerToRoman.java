@@ -1,6 +1,7 @@
 package com.wkk.string;
 
 /**
+ * 对于罗马数字从左到右的每一位，选择尽可能大的符号值
  * @Time: 20-4-8上午9:17
  * @Author: kongwiki
  * @Email: kongwiki@163.com
@@ -20,7 +21,7 @@ public class IntegerToRoman {
     }
 
     public static void main(String[] args) {
-        int a = 4;
+        int a = 90;
         System.out.println(intToRoman(a));
     }
 }
