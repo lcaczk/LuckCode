@@ -1,5 +1,9 @@
 package com.wkk.dp;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * 使用最小花费爬楼梯
  * 思路：
@@ -30,5 +34,10 @@ public class LC_746 {
             dp[i] = Math.min(dp[i-1], dp[i-2]) + cost[i];
         }
         return Math.min(dp[cost.length-1], dp[cost.length-2]);
+    }
+
+    public static void main(String[] args) {
+        List<List<Integer>> list = new ArrayList<>();
+        list.add(Arrays.asList(1,2,3));
     }
 }
