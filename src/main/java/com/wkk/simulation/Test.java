@@ -41,13 +41,5 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        String str = "abcdefghijklmnopqrstuvwxyz";
-        List<String> list = new ArrayList<>();
-        map = new HashMap<>();
-        for (int i = 1; i <= str.length(); i++) {
-            map.put(str.charAt(i-1), i);
-        }
-        backtrack(str, 3, 27, list, new StringBuilder(), 0);
-        System.out.println(list);
     }
 }
