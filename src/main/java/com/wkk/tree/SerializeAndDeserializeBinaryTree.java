@@ -2,9 +2,9 @@ package com.wkk.tree;
 
 import com.common.structure.TreeNode;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
-import java.util.LinkedList;
 
 /**
  * @Time: 20-3-6下午5:58
@@ -12,41 +12,52 @@ import java.util.LinkedList;
  * @Email: kongwiki@163.com
  */
 public class SerializeAndDeserializeBinaryTree {
-    private final String delimiter = ",";
-    private final String emptyNode = "#";
-
+    private String SPLIT = ",";
+    private String EMPTY = "#";
+    private StringBuilder sb = new StringBuilder();
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        StringBuilder sb = new StringBuilder();
-        serialize(root, sb);
+        // 前序遍历
+        if (root == null) {
+            return EMPTY;
+        }
+        serialized(root);
+        System.out.println(sb.toString());
         return sb.toString();
     }
 
-    private void serialize(TreeNode root, StringBuilder sb) {
-        if(root == null) {
-            sb.append(emptyNode).append(delimiter);
-        } else {
-            sb.append(root.val).append(delimiter);
-            serialize(root.left, sb);
-            serialize(root.right, sb);
+    private void serialized(TreeNode root) {
+        if (root == null) {
+            sb.append(EMPTY);
+            sb.append(SPLIT);
+            return;
         }
+        sb.append(root.val);
+        sb.append(SPLIT);
+        serialized(root.left);
+        serialized(root.right);
     }
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        Deque<String> nodes = new LinkedList<>();
-        nodes.addAll(Arrays.asList(data.split(delimiter)));
-        return deserialize(nodes);
+        String[] arr = data.split(SPLIT);
+        Deque<String> queue = new ArrayDeque<>(Arrays.asList(arr));
+        return deserialize(queue);
     }
 
-    private TreeNode deserialize(Deque<String> nodes) {
-        String nodeVal = nodes.pollFirst();
-        if(nodeVal.equals(emptyNode)) {
+    private TreeNode deserialize(Deque<String> queue) {
+        if (queue.isEmpty()) { // 1
             return null;
         }
-        TreeNode node = new TreeNode(Integer.parseInt(nodeVal));
-        node.left = deserialize(nodes);
-        node.right = deserialize(nodes);
-        return node;
+        String str = queue.poll();
+        // 1、2 不能够合并，不然 队列元素无法正常弹出，导致后续元素一直无法构成
+        if (str.equals(EMPTY)) { // 2
+            return null;
+        }
+        int val = Integer.parseInt(str);
+        TreeNode root = new TreeNode(val);
+        root.left = deserialize(queue);
+        root.right = deserialize(queue);
+        return root;
     }
 }

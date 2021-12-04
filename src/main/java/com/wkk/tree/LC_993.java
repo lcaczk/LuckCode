@@ -84,6 +84,24 @@ public class LC_993 {
         preOrder(root.right, root);
     }
 
+    private Map<Integer, TreeNode> parent = new HashMap<>();
+    private Map<Integer, Integer> depths = new HashMap<>();
+    public boolean isCousinsIII(TreeNode root, int x, int y) {
+        // 需要存储 每个节点的深度， 每个节点的父节点
+        dfs(root, null, 0);
+        return depths.get(x) == depths.get(y) && parent.get(x).val != parent.get(y).val;
+    }
+
+    private void dfs(TreeNode root, TreeNode pre, int level) {
+        if (root == null) {
+            return;
+        }
+        parent.put(root.val, pre);
+        depths.put(root.val, level);
+        dfs(root.left, root, level + 1);
+        dfs(root.right, root, level + 1);
+    }
+
     private static int[] genRemovedArray(int[] array, int idx) {
         int len = array.length;
         int[] res = new int[len - 1];

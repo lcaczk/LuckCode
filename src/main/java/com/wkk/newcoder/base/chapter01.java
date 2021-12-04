@@ -47,6 +47,10 @@ public class chapter01 {
         }
     }
 
+    /**
+     * 插入排序
+     * @param arr
+     */
     public static void insertSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
@@ -62,6 +66,10 @@ public class chapter01 {
         }
     }
 
+    /**
+     * 选择排序
+     * @param arr
+     */
     public static void selectSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
